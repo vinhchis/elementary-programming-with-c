@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"unistd.h": "c",
+			"stdio.h": "c",
+			"chrono": "c",
+			"functional": "c"
+		}
+	}
+}
