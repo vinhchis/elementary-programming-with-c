@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 #include<string.h>
 
 int main(){
@@ -8,9 +7,10 @@ int main(){
 
     // Nhập giá trị 2 chuỗi
     printf("Enter s1: ");
-    gets(s1);
+    scanf("%s",s1);
     printf("Enter s2: ");
-    gets(s2);
+    scanf("%s",s2);
+    
 
     // Hiển thị s1 và s2 trước khi gọi hàm
     printf("s1 = \"%s\", s2 = \"%s\"\n", s1, s2);
@@ -23,6 +23,6 @@ int main(){
     printf("s1 = \"%s\", s2 = \"%s\"", s1, s2);
 
 
-    getch();
+    getchar();
     return 0;
 }

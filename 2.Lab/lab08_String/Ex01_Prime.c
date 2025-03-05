@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 #include<stdbool.h>
 #include<math.h>
 /*
@@ -20,15 +19,6 @@ bool isPrime(int n){
     return true;
 }
 
-void listPrime(int n)
-{
-    for(int i = 2; i < n; i++){
-        if(isPrime(i)){
-            printf("%4d", i);
-        }
-    }
-}
-
 int main()
 {
     int n;
@@ -44,6 +34,6 @@ int main()
     }
 
 
-    getch();
+    getchar();
     return 0;
 }

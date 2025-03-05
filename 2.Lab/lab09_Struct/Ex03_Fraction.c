@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 #include<stdlib.h>
 
 int findGCD(int a, int b) {
@@ -103,6 +102,6 @@ int main()
 
     compareFractions(f1, f2);
 
-    getch();
+    getchar();
     return 0;   
 }

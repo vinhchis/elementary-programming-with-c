@@ -1,11 +1,12 @@
 #include<stdio.h>
-#include<conio.h>
 #include<string.h>
 #include <stdbool.h>
 
 /*
     Viết chương trình nhập vào 1 chuỗi, kiểm tra chuỗi vừa nhập có đối xứng hay không? (Sử dụng chương trình con).
-    Ví dụ: “aptech”: là chuỗi không đối xứng, “radar”: là chuỗi đối xứng
+    Ví dụ: 
+    - “aptech”: là chuỗi không đối xứng, 
+    - “radar”: là chuỗi đối xứng
 
 */
 
@@ -34,7 +35,7 @@ bool isSmtString(char* str){
 int main(){
     char str[20];
     printf("Enter a string: ");
-    gets(str);
+    scanf("%s",str);
 
     if(isSmtString(str)){
         printf("%s is a sysmetrical string.", str);
@@ -44,6 +45,6 @@ int main(){
     }
 
 
-    getch();
+    getchar();
     return 0;
 }

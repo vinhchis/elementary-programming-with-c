@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <conio.h>
 #include <stdbool.h>
 #define maxYear 3000
 
@@ -44,29 +43,33 @@ int nDaysOfMonth(int month, int year){
     }
 }
 
-Date findNextDate(Date date){
+Date findNextDate(Date date, int k){
     Date nextDate;
-    nextDate = date;
+    int month, year, day;
 
-    if(nDaysOfMonth(date.month, date.year) == date.day)
-    {
-        nextDate.day = 1;
-        if(date.month == 12){
-            nextDate.month = 1;
-            nextDate.year += 1;
-        }
-        nextDate.month += 1;
-    } else{
-        nextDate.day += 1;
-
+    month = date.month;
+    year = date.year;
+    day =  date.day + k; // 
+   
+    while(day > nDaysOfMonth(month, year)){
+        day -= nDaysOfMonth(month, year);
+        month += 1;
+        if(month > 12) {
+            year += 1;
+            month = 1;
+        }   
     }
+    
+    nextDate.day = day;
+    nextDate.month = month;
+    nextDate.year = year;
 
     return nextDate;
 }
 
 int main() {
     Date d, nd;
-    int day, month, year;
+    int day, month, year, k;
 
     do {
         printf("Enter year: ");
@@ -75,6 +78,7 @@ int main() {
         {
             printf("\tWrong year, please input year again !\n");
         }
+        // while (getchar() != '\n' && getchar() != EOF);
     } while (year <= 0 || year > maxYear);
 
     do {
@@ -84,6 +88,7 @@ int main() {
         {
             printf("\tWrong month, please input month again !\n");
         }
+        // while (getchar() != '\n' && getchar() != EOF);
     } while (month <= 0  || month > 12);
 
     do {
@@ -93,16 +98,19 @@ int main() {
         {
             printf("\tWrong day, please input day again !\n");
         }
+        // while (getchar() != '\n' && getchar() != EOF);
     } while (day <= 0  || day > nDaysOfMonth(month, year));
     
     d.day = day;
     d.month= month;
     d.year = year;
-    nd = findNextDate(d);
 
-    printf("Next day of %d/%d/%d : %d/%d/%d", d.day, d.month,d.year, nd.day,nd.month, nd.year);
+    k = 10;
+    nd = findNextDate(d, k);
+
+    printf("Next %d day of %d/%d/%d : %d/%d/%d", k, d.day, d.month,d.year, nd.day,nd.month, nd.year);
     
     
-    getch();
+    getchar();
     return 0;
 }

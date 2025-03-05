@@ -2,7 +2,6 @@
    Viết chương trình thêm 1 phần tử x vào mảng tại vị trí k.
 */
 #include<stdio.h>
-#include<conio.h>
 #define MAX 100
 
 int main()
@@ -17,9 +16,9 @@ int main()
 
     for(int i=0; i < n; i++)
     {
-        _flushall();
         printf("num[%d]: ", i);
         scanf("%f", &num[i]);
+        while(getchar() != '\n' && getchar() != EOF);
     }
 
     printf("Print out elements of array: ");
@@ -30,7 +29,6 @@ int main()
 
 
     do{
-        _flushall();
         printf("\nEnter x-value and k-position: ");        
         scanf("%f%d", &x, &k);
         if(k <= 0 || k > n){
@@ -51,6 +49,6 @@ int main()
     }
     
 
-    getch();
+    getchar();
     return 0;
 }

@@ -1,9 +1,6 @@
 #include<stdio.h>
-#include<conio.h>
 #include<string.h>
-/*
 
-*/
 int main(){
     int n;
     printf("How many students do you want to enter, N(<=10) = ");
@@ -13,9 +10,9 @@ int main(){
     char str[10][20];
 
     for(int i = 0; i < n; i++){
-        _flushall();
         printf("Enter name of student %d: ", i + 1);
-        gets(str[i]);
+        scanf("%s",str[i]);
+        while(getchar() != '\n' && getchar() != EOF);
     }
 
     for(int i=0; i < n -1 ; i++)
@@ -29,12 +26,12 @@ int main(){
         }
     }
 
-    printf("\nAssending student names: ");
+    printf("\nAssending student names: \n");
     for (int i = 0; i < n; i++)
     {
-        printf("%-20s",str[i]);
+        printf("\t%d. %s\n", i+1, str[i]);
     }
 
-    getch();
+    getchar();
     return 0;
 }

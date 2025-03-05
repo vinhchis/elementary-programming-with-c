@@ -61,6 +61,7 @@ int main()
     strcpy(p.name, "");
     p.code = 0;
 
+    // read binary
     fread(&d, sizeof(double), 1, fp);
     fread(&i, sizeof(int), 1, fp);
     fread(&li, sizeof(long), 1, fp);

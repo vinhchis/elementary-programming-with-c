@@ -3,7 +3,6 @@
     Giá trị của các phần tử của mảng nhập từ bàn phím
 */
 #include<stdio.h>
-#include<conio.h>
 #define MAX 100
 
 int main()
@@ -16,12 +15,14 @@ int main()
         scanf("%d", &n);
     } while(n <= 0 || n > 100);
 
-    for(int i=0; i < n; i++)
+    for(int i = 0; i < n; i++)
     {
-        _flushall();
         printf("num[%d]: ", i);
         scanf("%f", &num[i]);
+        while(getchar() != '\n' && getchar() != EOF);
     }
+
+
 
     printf("Print out elements of array: ");
     for(int i=0; i<n; i++)
@@ -36,6 +37,6 @@ int main()
             printf("%8.3f", num[i]);
         }
     }
-    getch();
+    getchar();
     return 0;
 }

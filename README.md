@@ -48,12 +48,14 @@ Dùng `gcc` để biên dịch
 
 ***Có thể dùng `g++` thay thế `gcc` mà không cần liên kết ***
 
-# Thay đổi quan trọng
-## Không dùng getc() vì gây tràn bộ nhớ
-1. Dùng `scanf`
-2. Dùng `fgets`
+# Utils
+## conio.h 
+> nó đã quá cũ để dùng (`getch()`, `getche()` ,..) . Thay vào đó dùng các hàm mới như `scanf` hay `fgets`, .. 
+## Đọc dữ liệu
+1. `scanf` : đọc đến space
+2. `fgets` : đọc 1 line
 
-
+*** Không dùng getc() vì gây tràn bộ nhớ ***
 ```C
     char s1[20];
     //1. scanf
@@ -64,19 +66,29 @@ Dùng `gcc` để biên dịch
     //Loại bỏ ký tự '\n' thừa nếu có
     s1[strcspn(s1, "\n")] = '\0';
 ```
-## Nếu không thể dùng `__flushall()` 
+## Buffer
 > Xóa tứ tự đã lưu vào buffer ở lần nhập trước , trước khi nhập
-1. Dùng `fflush(stdin)`
-2. Dùng `getchar` để xóa đi kí tự cuối cùng.
+1. `getchar()` : để xóa đi kí tự cuối cùng.
+2. `fflush(stdin)` : tùy vào compiler 
+*** `__flushall()` not support ***
 
+**Cách an toàn nhất:**
 ```C
+ // Remove a last character from input('\n',..)
  while (getchar() != '\n' && getchar() != EOF);
 ```
 
 ## _exit(0)
-
+> terminal program
 ```C
 _exit(0); // #include<unistd.h>
 ```
 
 ##  system("clear") để xóa console
+
+# Thư viện hay dùng
+- `stdio.h` : thư viện tiêu chuẩn, hầu như cho bất cứ file nào
+- `string.h` : hàm về chuỗi kí tự
+- `math.h` : cung cấp các hàm toán học
+- `unistd.h` : điều hường chương trình
+-

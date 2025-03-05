@@ -1,10 +1,11 @@
 #include<stdio.h>
-#include<conio.h>
 #include <stdlib.h>
 #include <string.h>
 /*
    Viết chương trình nhập vào 1 chuỗi, biến đổi chuỗi này thành chữ hoa và xuất ra màn hình. 
    Làm tương tự cho chữ thường (Sử dụng chương trình con).
+
+   // hint: mã ASCII của 1 kí tự in hoa cách tứ tự thường 32 đơn vị
 */
 void uppercase(char* str){
     int i = 0;
@@ -43,6 +44,6 @@ int main(){
     lowercase(str);
     printf("Lowercase of string to \"%s\"\n", str);
 
-    getch();
+    getchar();
     return 0;
 }

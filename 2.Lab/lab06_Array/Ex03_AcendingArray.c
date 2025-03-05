@@ -2,7 +2,6 @@
    Viết chương trình sắp xếp mảng 1 chiều các số thực tăng dần (sử dụng thuật toán bubble sort).
 */
 #include<stdio.h>
-#include<conio.h>
 #define MAX 100
 
 int main()
@@ -17,7 +16,6 @@ int main()
 
     for(int i=0; i < n; i++)
     {
-        _flushall();
         printf("num[%d]: ", i);
         scanf("%f", &num[i]);
     }
@@ -46,6 +44,6 @@ int main()
         printf("%8.3f", num[i]);
     }
 
-    getch();
+    getchar();
     return 0;
 }

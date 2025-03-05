@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 #include <stdlib.h>
 #include <string.h>
 /*
@@ -16,6 +15,6 @@ int main(){
 
     printf("\"%s\" is converted to %d", ch, n);
 
-    getch();
+    getchar();
     return 0;
 }

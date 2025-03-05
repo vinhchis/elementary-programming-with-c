@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 #include<stdlib.h>
 
 typedef struct
@@ -81,6 +80,6 @@ int main()
 
     printf("Distance of T1 and T2: \n");
     displayTime(dt);
-    getch();
+    getchar();
     return 0;
 }

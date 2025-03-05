@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 #include<string.h>
 #include <stdbool.h>
 
@@ -12,9 +11,10 @@ int main(){
     char str[200];
     
     printf("Enter a string: ");
-    gets(str);
+    fgets(str, sizeof(str), stdin);
+    str[strcspn(str, "\n")] = '\0'; // remove '\n'
 
-    printf("Before: \"%s\" has %d words.\n", str);
+    printf("Before: \"%s\" \n", str);
 
     // Method 2: count words (with multiple consecutive spaces)
     int i = 0;
@@ -37,6 +37,6 @@ int main(){
     
     printf("After(Uppercase first character of words): \"%s\"\n", str);
 
-    getch();
+    getchar();
     return 0;
 }

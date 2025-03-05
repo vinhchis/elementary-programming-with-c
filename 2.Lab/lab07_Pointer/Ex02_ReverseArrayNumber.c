@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 /*
     Viết chương trình in mảng theo chiều đảo ngược bởi sử dụng con trỏ trong C.
 */
@@ -13,10 +12,10 @@ int main(){
 
     ptr = num;
     for(int i=0; i< n; i++){
-        _flushall();
         printf("Enter number %d: ", i + 1);
         scanf("%d", ptr);
         ptr++;
+        while(getchar() != '\n' && getchar() != EOF);
     }
 
     ptr = num;
@@ -33,6 +32,6 @@ int main(){
     }
 
 
-    getch();
+    getchar();
     return 0;
 }

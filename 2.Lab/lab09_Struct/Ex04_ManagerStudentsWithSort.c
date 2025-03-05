@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 #include<stdlib.h>
 #include<string.h>
 
@@ -47,7 +46,7 @@ void inputStudentList(StudentList* students)
     for(int i=0; i < students->size; i++){
         printf("\nEnter student no.%02d : \n", i + 1);
 
-        _flushall();
+ while (getchar() != '\n' && getchar() != EOF);
         printf("\tEnter Student's name: ");
         gets(student.name);
         printf("\tEnter Student's class: ");
@@ -101,7 +100,7 @@ void seachStudents(StudentList students){
     printf("\n\t2. Search by Class");
     printf("\n\tEnter Choice: ");
     scanf("%d", &sb);
-    _flushall();
+    while (getchar() != '\n' && getchar() != EOF);
 
     switch (sb)
     {
@@ -127,7 +126,7 @@ void updateStudent(StudentList *students){
     for(int i=0; i< students->size; i++)
     {
         if(strcmp(students->elements[i].name, name) == 0){
-            _flushall();
+     while (getchar() != '\n' && getchar() != EOF);
             printf("\tEnter Student's class: ");
             gets(students->elements[i].class);
             printf("\tEnter Student's mark: ");

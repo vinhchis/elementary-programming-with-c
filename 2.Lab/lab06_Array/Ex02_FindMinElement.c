@@ -2,7 +2,6 @@
    Viết chương trình tìm vị trí của phần tử có giá trị nhỏ nhất trong mảng 1 chiều các số nguyên.
 */
 #include<stdio.h>
-#include<conio.h>
 #define MAX 100
 
 int main()
@@ -17,9 +16,9 @@ int main()
 
     for(int i=0; i < n; i++)
     {
-        _flushall();
         printf("num[%d]: ", i);
         scanf("%d", &num[i]);
+        while(getchar() != '\n' && getchar() != EOF);
     }
 
     printf("Print out elements of array: ");
@@ -36,8 +35,8 @@ int main()
         }
     }
 
-    printf("\nMin element of array: %d", min);
+    printf("\nMin element of array: %d\n", min);
 
-    getch();
+    getchar();
     return 0;
 }
