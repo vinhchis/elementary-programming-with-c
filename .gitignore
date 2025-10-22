@@ -1,0 +1,37 @@
+.vscode
+
+# C/C++ build artifacts
+# object files
+*.o
+*.obj
+
+# static & shared libs
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+
+# common executables and outputs
+a.out
+*.out
+*.exe
+*.elf
+
+# debug / platform artifacts
+*.dSYM/
+*.stackdump
+core
+
+# IDE / build dirs
+/build/
+/bin/
+dist/
+CMakeFiles/
+CMakeCache.txt
+*.vcxproj.user
+*.suo
+
+# temporary editor files
+*~
+*.swp
