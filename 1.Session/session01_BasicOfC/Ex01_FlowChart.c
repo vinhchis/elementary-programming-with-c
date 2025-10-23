@@ -8,15 +8,15 @@ int main()
 {
   /*
     Commment - Chú thích :
-    Begin | Start | Bắt đầu  
-  */ 
+    Begin | Start | Bắt đầu
+  */
 
-  // Bước chuẩn bị 
+  // Bước chuẩn bị
   int a, b, c;
 
   // Bước 1 : input A, B
   a = 10;
-  b = 11;
+  b = 12;
 
   // Bước 2 : C = A + B
   c = a + b;

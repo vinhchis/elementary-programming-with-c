@@ -2,14 +2,21 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug C++ with Build",
+      "name": "Debug C with Build",
       "type": "cppdbg",
       "request": "launch",
-      "preLaunchTask": "Build C++ File", // Tham chiếu task trong tasks.json
+      "preLaunchTask": "Build C File", // Tham chiếu task trong tasks.json
       "program": "${fileDirname}/${fileBasenameNoExtension}",
       "cwd": "${workspaceFolder}",
       "MIMode": "gdb",
       "miDebuggerPath": "/usr/bin/gdb"
+    },
+    {
+      "name": "Run C without Debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "preLaunchTask": "Build C File", // Tham chiếu task trong tasks.json
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
     },
   ]
 }

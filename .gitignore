@@ -1,9 +1,8 @@
-.vscode
+# .vscode
 
 # C/C++ build artifacts
 # object files
 *.o
-*.obj
 
 # static & shared libs
 *.a
@@ -19,19 +18,19 @@ a.out
 *.elf
 
 # debug / platform artifacts
-*.dSYM/
-*.stackdump
-core
+# *.dSYM/
+# *.stackdump
+# core
 
 # IDE / build dirs
-/build/
-/bin/
-dist/
-CMakeFiles/
-CMakeCache.txt
-*.vcxproj.user
-*.suo
+# /build/
+# /bin/
+# dist/
+# CMakeFiles/
+# CMakeCache.txt
+# *.vcxproj.user
+# *.suo
 
 # temporary editor files
-*~
-*.swp
+# *~
+# *.swp

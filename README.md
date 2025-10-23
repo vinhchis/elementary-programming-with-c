@@ -102,3 +102,7 @@ system("clear"); // on Unix-like systems
 - Always validate inputs and use size limits for buffers.
 - Prefer standard and portable APIs where possible.
 - Use compiler warnings (`-Wall -Wextra`) to catch potential issues early.
+
+# Q&A
+- Can you G++ to compile C ?
+- Cmake ? (configuration how to generate buid files)
